@@ -18,8 +18,9 @@
   .lede { margin: 0 0 28px; color: var(--soft); font-size: 17px; }
   .person { background: var(--card); border-radius: 14px; padding: 18px; margin-bottom: 12px; }
   .person h2 { margin: 0; font-size: 21px; line-height: 1.2; font-weight: 700; }
-  .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-  .links a { flex: 1 1 88px; min-height: 44px; display: flex; align-items: center; justify-content: center; padding: 10px 12px; border-radius: 10px; background: var(--lime); color: var(--ink); font-size: 16px; font-weight: 700; text-decoration: none; }
+  .person .role { margin: 2px 0 0; color: var(--lime); font-size: 15px; font-weight: 600; }
+  .links { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+  .links a { min-height: 44px; display: flex; align-items: center; justify-content: center; padding: 10px 12px; border-radius: 10px; background: var(--lime); color: var(--ink); font-size: 16px; font-weight: 700; text-decoration: none; overflow-wrap: anywhere; text-align: center; }
   .links a:focus-visible { outline: 3px solid var(--white); outline-offset: 2px; }
 </style>
 </head>
@@ -31,14 +32,27 @@
 
   <!-- When a person's details arrive, add this under their name, keeping only the links they agreed to:
   <div class="links">
-    <a href="tel:...">Call</a>
-    <a href="mailto:...">Email</a>
+    <a href="tel:...">Call ...</a>
+    <a href="mailto:...">Email ...</a>
     <a href="https://www.linkedin.com/in/...">LinkedIn</a>
   </div>
   -->
 
-  <section class="person"><h2>Talhah Patel</h2></section>
-  <section class="person"><h2>Mohammed Amaan Gaffar</h2></section>
+  <section class="person">
+    <h2>Talhah Patel</h2>
+    <p class="role">Group leader</p>
+    <div class="links">
+      <a href="tel:+27633920491">Call 063 392 0491</a>
+      <a href="mailto:talhahp11@gmail.com">Email talhahp11@gmail.com</a>
+    </div>
+  </section>
+  <section class="person">
+    <h2>Mohammed Amaan Gaffar</h2>
+    <div class="links">
+      <a href="tel:+27658024004">Call 065 802 4004</a>
+      <a href="mailto:4maan.g24@gmail.com">Email 4maan.g24@gmail.com</a>
+    </div>
+  </section>
   <section class="person"><h2>Nikhil Rajkumar</h2></section>
   <section class="person"><h2>Sabien Naidoo</h2></section>
   <section class="person"><h2>Veolin Naidoo</h2></section>
